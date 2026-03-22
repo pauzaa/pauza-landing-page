@@ -1,0 +1,100 @@
+{
+  "Metadata": {
+    "title": "Pauza — Fokus va raqamli farovonlik ilovasi",
+    "description": "Chalg'ituvchi ilovalarni maxsus rejimlar, NFC fizik qulf ochish, aqlli jadvallar va AI tahlillari bilan bloklang. Pauza bilan vaqtingizni qaytarib oling."
+  },
+  "Header": {
+    "download": "Yuklab olish"
+  },
+  "Hero": {
+    "headline": "Vaqtingizni qaytarib oling",
+    "subtitle": "Chalg'ituvchi ilovalarni bloklang, fokus odatlarini shakllantiring va ekran vaqtingizni nazorat qiling — chiqishni ongli qiladigan fizik NFC qulf ochish bilan."
+  },
+  "Features": {
+    "heading": "Fokuslanish uchun kerak boʻlgan hamma narsa",
+    "hardBlocking": {
+      "title": "Qattiq ilova bloklash",
+      "description": "Ish, oʻqish yoki uyqu uchun maxsus bloklash rejimlari yarating. Bloklangan ilova ochilganda toʻliq ekranli qalqon paydo boʻladi."
+    },
+    "nfcUnlock": {
+      "title": "Fizik NFC qulf ochish",
+      "description": "NFC tegini fokus seanslarini tugatish uchun fizik kalit sifatida ulang. Toʻxtatish ongli fizik harakatni talab qiladi."
+    },
+    "schedules": {
+      "title": "Aqlli jadvallar",
+      "description": "Har bir rejim uchun avtomatik bloklash jadvallarini oʻrnating. Bloklar vaqtida boshlanadi va tugaydi, hatto oflayn ham."
+    },
+    "analytics": {
+      "title": "Foydalanish tahlili",
+      "description": "Ekran vaqtingiz, ilova foydalanishi, kunlik seriyalar va fokus tarixini kuzating. Soatlik issiqlik xaritalari va tendentsiyalarni koʻring."
+    },
+    "aiInsights": {
+      "title": "AI tahlillari",
+      "description": "Shaxsiylashtirilgan foydalanish tahlili, qaramlik tekshiruvlari va AI tomonidan tavsiya etilgan fokus jadvallari oling."
+    },
+    "friends": {
+      "title": "Doʻstlar va peshqadamlar jadvali",
+      "description": "Doʻstlar qoʻshing, seriyalarni solishtiring va peshqadamlar jadvalida raqobatlashing. Ijtimoiy motivatsiya bilan javobgar boʻling."
+    }
+  },
+  "HowItWorks": {
+    "heading": "Qanday ishlaydi",
+    "step1": {
+      "title": "Rejim yarating",
+      "description": "Bloklash rejimini sozlang — qaysi ilovalarni bloklashni tanlang, pauza qoidalarini belgilang va qulf ochish usulini tanlang."
+    },
+    "step2": {
+      "title": "Seansni boshlang",
+      "description": "Rejimingizni bir tegish bilan faollashtiring. Bloklangan ilovalar darhol himoyalanadi. Avtomatlashtirish uchun jadval oʻrnating."
+    },
+    "step3": {
+      "title": "Fokusda qoling",
+      "description": "Agar bloklangan ilovani ochmoqchi boʻlsangiz, qalqon ekrani paydo boʻladi. Erta toʻxtatish uchun NFC tegingizni skanerlang."
+    }
+  },
+  "Screenshots": {
+    "heading": "Pauzani amalda koʻring"
+  },
+  "Testimonials": {
+    "heading": "Foydalanuvchilar nima deydi",
+    "testimonial1": {
+      "quote": "Pauza ekran vaqtimni boshqarish usulimni butunlay oʻzgartirdi. NFC tegi chalg'ishlarga berilishni ancha qiyinlashtiradi.",
+      "name": "Alisher K.",
+      "descriptor": "Magistrant"
+    },
+    "testimonial2": {
+      "quote": "Aqlli jadvallarni yaxshi koʻraman. Telefonim ish soatlarida chalg'ituvchi ilovalarni avtomatik bloklaydi.",
+      "name": "Malika S.",
+      "descriptor": "Mahsulot menejeri"
+    },
+    "testimonial3": {
+      "quote": "Doʻstlar bilan peshqadamlar jadvali meni javobgar qiladi. Biz kim koʻproq fokusda qolishini koʻrish uchun raqobatlashamiz!",
+      "name": "Jasur L.",
+      "descriptor": "Dasturchi"
+    }
+  },
+  "DownloadCta": {
+    "heading": "Vaqtingizni qaytarib olishga tayyormisiz?",
+    "subtitle": "Pauzani bepul yuklab oling va bugundan soglom ekran odatlarini shakllantirishni boshlang."
+  },
+  "Footer": {
+    "tagline": "Fokus va farovonlik",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish shartlari",
+    "githubIssues": "Xatoliklar va fikr-mulohazalar",
+    "telegram": "Telegram yordam",
+    "copyright": "© 2026 Pauza. Barcha huquqlar himoyalangan."
+  },
+  "NotFound": {
+    "heading": "Sahifa topilmadi",
+    "subtitle": "Siz qidirayotgan sahifa mavjud emas yoki koʻchirilgan.",
+    "goHome": "Bosh sahifaga"
+  },
+  "LanguageSwitcher": {
+    "label": "Til",
+    "en": "English",
+    "ru": "Русский",
+    "uz": "Oʻzbek",
+    "uz-Cyrl": "Ўзбек"
+  }
+}

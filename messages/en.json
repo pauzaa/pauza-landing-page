@@ -1,0 +1,100 @@
+{
+  "Metadata": {
+    "title": "Pauza — Focus & Digital Wellbeing App",
+    "description": "Block distracting apps with custom modes, NFC-powered physical unlock, smart schedules, and AI insights. Take back your time with Pauza."
+  },
+  "Header": {
+    "download": "Download"
+  },
+  "Hero": {
+    "headline": "Take Back Your Time",
+    "subtitle": "Block distracting apps, build focus habits, and take control of your screen time — with physical NFC unlocking that makes quitting intentional."
+  },
+  "Features": {
+    "heading": "Everything You Need to Stay Focused",
+    "hardBlocking": {
+      "title": "Hard App Blocking",
+      "description": "Create custom blocking modes for work, study, or sleep. When a blocked app is opened, a full-screen shield takes over — no soft warnings, no easy bypasses."
+    },
+    "nfcUnlock": {
+      "title": "Physical NFC Unlock",
+      "description": "Link an NFC tag as your physical key to end focus sessions. Stopping requires a deliberate physical action, making quitting intentional — not impulsive."
+    },
+    "schedules": {
+      "title": "Smart Schedules",
+      "description": "Set automatic blocking schedules for each mode. Blocks start and end on time, even offline — no internet required for enforcement."
+    },
+    "analytics": {
+      "title": "Usage Analytics",
+      "description": "Track your screen time, app usage, daily streaks, and focus history. See hourly heatmaps, per-app breakdowns, and progress trends."
+    },
+    "aiInsights": {
+      "title": "AI-Powered Insights",
+      "description": "Get personalized usage analysis, addiction checks, and AI-suggested focus schedules. Understand your habits and get actionable recommendations."
+    },
+    "friends": {
+      "title": "Friends & Leaderboard",
+      "description": "Add friends, compare streaks, and compete on the leaderboard. Stay accountable with social motivation and friendly competition."
+    }
+  },
+  "HowItWorks": {
+    "heading": "How It Works",
+    "step1": {
+      "title": "Create a Mode",
+      "description": "Set up a blocking mode — choose which apps to block, set pause rules, and pick your unlock method: NFC tag, QR code, or manual."
+    },
+    "step2": {
+      "title": "Start a Session",
+      "description": "Activate your mode with one tap. Blocked apps are instantly shielded. Set a schedule to automate it."
+    },
+    "step3": {
+      "title": "Stay Focused",
+      "description": "If you try to open a blocked app, a shield screen takes over. To stop early, scan your NFC tag — making the decision physical and intentional."
+    }
+  },
+  "Screenshots": {
+    "heading": "See Pauza in Action"
+  },
+  "Testimonials": {
+    "heading": "What Users Say",
+    "testimonial1": {
+      "quote": "Pauza completely changed how I manage my screen time. The NFC tag makes it so much harder to give in to distractions.",
+      "name": "Alex K.",
+      "descriptor": "Graduate Student"
+    },
+    "testimonial2": {
+      "quote": "I love the smart schedules. My phone automatically locks distracting apps during work hours. No willpower needed.",
+      "name": "Maria S.",
+      "descriptor": "Product Manager"
+    },
+    "testimonial3": {
+      "quote": "The leaderboard with friends keeps me accountable. We compete to see who can stay focused the longest!",
+      "name": "James L.",
+      "descriptor": "Software Developer"
+    }
+  },
+  "DownloadCta": {
+    "heading": "Ready to Take Back Your Time?",
+    "subtitle": "Download Pauza for free and start building healthier screen habits today."
+  },
+  "Footer": {
+    "tagline": "Focus & Wellbeing",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "githubIssues": "Bug Reports & Feedback",
+    "telegram": "Telegram Support",
+    "copyright": "© 2026 Pauza. All rights reserved."
+  },
+  "NotFound": {
+    "heading": "Page Not Found",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go Home"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "ru": "Русский",
+    "uz": "Oʻzbek",
+    "uz-Cyrl": "Ўзбек"
+  }
+}
