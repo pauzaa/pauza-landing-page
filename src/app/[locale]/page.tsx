@@ -17,7 +17,7 @@ export default async function HomePage(props: {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content" className="pt-20">
         <Hero />
         <Features />
         <HowItWorks />
