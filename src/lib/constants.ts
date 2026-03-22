@@ -10,4 +10,5 @@ export const GITHUB_ISSUES_URL =
   process.env.NEXT_PUBLIC_GITHUB_ISSUES_URL ?? "#";
 export const TELEGRAM_URL =
   process.env.NEXT_PUBLIC_TELEGRAM_URL ?? "#";
-export const SUPPORT_EMAIL = "aisroilov1029@gmail.com";
+export const SUPPORT_EMAIL =
+  process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "#";
