@@ -2,55 +2,35 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image, { type StaticImageData } from "next/image";
 import { PhoneMockup } from "./PhoneMockup";
 import { fadeUpProps } from "@/lib/motion";
 
+import homeScreen from "@/assets/screenshots/home_screen.png";
+import editModeScreen from "@/assets/screenshots/edit_mode_screen.png";
+import homeActiveSession from "@/assets/screenshots/home_active_session.png";
+import shieldScreen from "@/assets/screenshots/shield_screen.png";
+import usageStats from "@/assets/screenshots/usage_stats.png";
+import blockingStats from "@/assets/screenshots/blocking_stats.png";
+import friendsScreen from "@/assets/screenshots/friends_screen.png";
+import leaderboardScreen from "@/assets/screenshots/leaderboard_screen.png";
+import nfcScanningScreen from "@/assets/screenshots/nfc_scanning_screen.png";
+
 interface ScreenItem {
   label: string;
-  gradient: string;
+  image: StaticImageData;
 }
 
 const screens: ScreenItem[] = [
-  {
-    label: "Dashboard",
-    gradient:
-      "linear-gradient(145deg, #800020 0%, #4a0e2b 40%, #1a1a2e 100%)",
-  },
-  {
-    label: "Mode Editor",
-    gradient:
-      "linear-gradient(160deg, #2d1b3d 0%, #800020 50%, #c2185b 100%)",
-  },
-  {
-    label: "Shield",
-    gradient:
-      "linear-gradient(135deg, #800020 0%, #b71c1c 35%, #ff6f00 100%)",
-  },
-  {
-    label: "Usage Stats",
-    gradient:
-      "linear-gradient(150deg, #0d3b66 0%, #1a535c 45%, #4ecdc4 100%)",
-  },
-  {
-    label: "Blocking Stats",
-    gradient:
-      "linear-gradient(140deg, #1b1b3a 0%, #800020 55%, #e8a87c 100%)",
-  },
-  {
-    label: "AI Insights",
-    gradient:
-      "linear-gradient(155deg, #2e1065 0%, #7c3aed 40%, #c084fc 100%)",
-  },
-  {
-    label: "Friends",
-    gradient:
-      "linear-gradient(130deg, #134e5e 0%, #1a6b5a 50%, #71b280 100%)",
-  },
-  {
-    label: "Leaderboard",
-    gradient:
-      "linear-gradient(145deg, #3a1c51 0%, #800020 45%, #d4a574 100%)",
-  },
+  { label: "Dashboard", image: homeScreen },
+  { label: "Mode Editor", image: editModeScreen },
+  { label: "Active Session", image: homeActiveSession },
+  { label: "Shield", image: shieldScreen },
+  { label: "Usage Stats", image: usageStats },
+  { label: "Blocking Stats", image: blockingStats },
+  { label: "Friends", image: friendsScreen },
+  { label: "Leaderboard", image: leaderboardScreen },
+  { label: "NFC Unlock", image: nfcScanningScreen },
 ];
 
 export function Screenshots() {
@@ -76,9 +56,13 @@ export function Screenshots() {
               className="flex shrink-0 snap-start flex-col items-center"
             >
               <PhoneMockup className="w-[168px]">
-                <div
-                  className="h-full w-full"
-                  style={{ background: screen.gradient }}
+                <Image
+                  src={screen.image}
+                  alt={screen.label}
+                  fill
+                  sizes="168px"
+                  quality={90}
+                  className="object-cover object-top"
                 />
               </PhoneMockup>
               <p className="mt-3 text-center text-sm text-on-surface-variant">

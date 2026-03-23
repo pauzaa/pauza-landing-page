@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { PhoneMockup } from "./PhoneMockup";
 import { StoreBadges } from "./StoreBadges";
+import homeScreen from "@/assets/screenshots/home_screen.png";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -34,7 +36,14 @@ export function Hero() {
           {/* Right column — phone mockup */}
           <div className="w-full max-w-xs flex-shrink-0 lg:max-w-sm">
             <PhoneMockup className="mx-auto">
-              <div className="h-full w-full bg-gradient-to-br from-primary/20 to-primary/5" />
+              <Image
+                src={homeScreen}
+                alt={t("headline")}
+                fill
+                priority
+                sizes="(max-width: 1024px) 320px, 384px"
+                className="object-cover object-top"
+              />
             </PhoneMockup>
           </div>
         </div>
