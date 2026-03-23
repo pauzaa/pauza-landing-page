@@ -3,13 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { fadeUpProps, staggerContainerProps } from "@/lib/motion";
-import { PhoneMockup } from "./PhoneMockup";
-
-const steps = [
-  { key: "step1", gradient: "bg-gradient-to-b from-primary/20 to-primary/5" },
-  { key: "step2", gradient: "bg-gradient-to-b from-primary/15 to-primary/30" },
-  { key: "step3", gradient: "bg-gradient-to-b from-primary/25 to-primary/10" },
-] as const;
+const steps = ["step1", "step2", "step3"] as const;
 
 export function HowItWorks() {
   const t = useTranslations("HowItWorks");
@@ -28,7 +22,7 @@ export function HowItWorks() {
           {...staggerContainerProps}
           className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8"
         >
-          {steps.map(({ key, gradient }, index) => (
+          {steps.map((key, index) => (
             <motion.div
               key={key}
               variants={fadeUpProps.variants}
@@ -36,12 +30,6 @@ export function HowItWorks() {
             >
               <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-on-primary">
                 {index + 1}
-              </div>
-
-              <div className="mx-auto mb-6 max-w-[200px]">
-                <PhoneMockup>
-                  <div className={`h-full w-full ${gradient}`} />
-                </PhoneMockup>
               </div>
 
               <h3 className="mb-2 text-lg font-semibold leading-snug text-on-surface">

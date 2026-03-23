@@ -37,66 +37,68 @@ export function Header() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-outline-variant bg-surface/80 backdrop-blur-lg">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        {/* Logo */}
-        <a
-          href="#hero"
-          className="relative flex shrink-0 items-center transition-opacity hover:opacity-80"
-          aria-label="Pauza — back to top"
-        >
-          <Image
-            src={logo}
-            alt="Pauza logo"
-            height={30}
-            className="h-[30px] w-auto"
-            priority
-          />
-        </a>
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-outline-variant bg-surface/80 backdrop-blur-lg">
+        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="relative flex shrink-0 items-center transition-opacity hover:opacity-80"
+            aria-label="Pauza — back to top"
+          >
+            <Image
+              src={logo}
+              alt="Pauza logo"
+              height={30}
+              className="h-[30px] w-auto"
+              priority
+            />
+          </a>
 
-        {/* Desktop navigation */}
-        <div className="hidden items-center gap-6 md:flex">
-          {NAV_LINKS.map((link) => (
+          {/* Desktop navigation */}
+          <div className="hidden items-center gap-6 md:flex">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-on-surface-variant transition-colors hover:text-on-surface"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            {/* Language switcher wrapper */}
+            <div className="rounded-lg border border-outline-variant bg-surface-container-low px-2 py-1 text-sm text-on-surface-variant transition-colors hover:border-outline [&_select]:cursor-pointer [&_select]:border-none [&_select]:bg-transparent [&_select]:text-sm [&_select]:text-on-surface-variant [&_select]:outline-none">
+              <LanguageSwitcher />
+            </div>
+
+            {/* Download CTA */}
             <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-on-surface-variant transition-colors hover:text-on-surface"
+              href="#download"
+              className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
             >
-              {link.label}
+              {t("download")}
             </a>
-          ))}
-
-          {/* Language switcher wrapper */}
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low px-2 py-1 text-sm text-on-surface-variant transition-colors hover:border-outline [&_select]:cursor-pointer [&_select]:border-none [&_select]:bg-transparent [&_select]:text-sm [&_select]:text-on-surface-variant [&_select]:outline-none">
-            <LanguageSwitcher />
           </div>
 
-          {/* Download CTA */}
-          <a
-            href="#download"
-            className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            className="flex size-10 items-center justify-center rounded-lg text-on-surface transition-colors hover:bg-surface-container-low md:hidden"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
-            {t("download")}
-          </a>
-        </div>
+            {menuOpen ? (
+              <X size={24} aria-hidden="true" />
+            ) : (
+              <Menu size={24} aria-hidden="true" />
+            )}
+          </button>
+        </nav>
+      </header>
 
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          className="flex size-10 items-center justify-center rounded-lg text-on-surface transition-colors hover:bg-surface-container-low md:hidden"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? (
-            <X size={24} aria-hidden="true" />
-          ) : (
-            <Menu size={24} aria-hidden="true" />
-          )}
-        </button>
-      </nav>
-
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay — rendered outside <header> to escape its backdrop-blur stacking context */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -104,7 +106,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col bg-surface/95 backdrop-blur-md md:hidden"
+            className="fixed inset-0 top-16 z-50 flex flex-col bg-surface md:hidden"
           >
             <div className="flex flex-1 flex-col gap-1 px-6 pt-6">
               {NAV_LINKS.map((link, i) => (
@@ -147,6 +149,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
