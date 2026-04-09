@@ -55,6 +55,8 @@ export default async function LocaleLayout(props: {
 
   setRequestLocale(locale);
 
+  const tLayout = await getTranslations({ locale, namespace: "Layout" });
+
   return (
     <html lang={locale} className={inter.className}>
       <body className="bg-surface text-on-surface">
@@ -62,7 +64,7 @@ export default async function LocaleLayout(props: {
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-on-primary focus:outline-none"
         >
-          Skip to content
+          {tLayout("skipToContent")}
         </a>
         <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
       </body>

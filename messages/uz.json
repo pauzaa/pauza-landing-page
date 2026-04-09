@@ -3,8 +3,22 @@
     "title": "Pauza — Fokus va raqamli farovonlik ilovasi",
     "description": "Chalg'ituvchi ilovalarni maxsus rejimlar, NFC fizik qulf ochish, aqlli jadvallar va AI tahlillari bilan bloklang. Pauza bilan vaqtingizni qaytarib oling."
   },
+  "Layout": {
+    "skipToContent": "Asosiy kontentga oʻtish"
+  },
   "Header": {
-    "download": "Yuklab olish"
+    "download": "Yuklab olish",
+    "logoAlt": "Pauza logotipi",
+    "nav": {
+      "features": "Imkoniyatlar",
+      "howItWorks": "Qanday ishlaydi",
+      "screenshots": "Skrinshotlar"
+    },
+    "aria": {
+      "backToTop": "Pauza — yuqoriga qaytish",
+      "openMenu": "Menyuni ochish",
+      "closeMenu": "Menyuni yopish"
+    }
   },
   "Hero": {
     "headline": "Vaqtingizni qaytarib oling",
@@ -49,11 +63,23 @@
     },
     "step3": {
       "title": "Fokusda qoling",
-      "description": "Agar bloklangan ilovani ochmoqchi boʻlsangiz, qalqon ekrani paydo boʻladi. Erta toʻxtatish uchun NFC tegingizni skanerlang."
+      "description": "Agar bloklangan ilovani ochmoqchi boʻlsangiz, qalqon ekrani paydo boʻladi. Erta toʻxtatish uchun NFC tegingizni skanerlang — qarorni jismoniy va ongli qilib."
     }
   },
   "Screenshots": {
-    "heading": "Pauzani amalda koʻring"
+    "heading": "Pauzani amalda koʻring",
+    "goTo": "{label} ga oʻtish",
+    "labels": {
+      "dashboard": "Bosh ekran",
+      "modeEditor": "Rejim muharriri",
+      "activeSession": "Faol seans",
+      "shield": "Qalqon",
+      "usageStats": "Foydalanish statistikasi",
+      "blockingStats": "Bloklash statistikasi",
+      "friends": "Doʻstlar",
+      "leaderboard": "Peshqadamlar jadvali",
+      "nfcUnlock": "NFC qulf ochish"
+    }
   },
   "Testimonials": {
     "heading": "Foydalanuvchilar nima deydi",
@@ -77,8 +103,17 @@
     "heading": "Vaqtingizni qaytarib olishga tayyormisiz?",
     "subtitle": "Pauzani bepul yuklab oling va bugundan soglom ekran odatlarini shakllantirishni boshlang."
   },
+  "StoreBadges": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "appStoreAria": "App Store'dan yuklab oling",
+    "googlePlayAria": "Google Play'dan oling"
+  },
   "Footer": {
     "tagline": "Fokus va farovonlik",
+    "logoAlt": "Pauza",
+    "legal": "Huquqiy maʼlumot",
+    "support": "Yordam",
     "privacy": "Maxfiylik siyosati",
     "terms": "Foydalanish shartlari",
     "githubIssues": "Xatoliklar va fikr-mulohazalar",
@@ -96,6 +131,7 @@
     "en": "English",
     "ru": "Русский",
     "uz": "Oʻzbek",
-    "uz-Cyrl": "Ўзбек"
+    "uz-Cyrl": "Ўзбек",
+    "kk": "Қазақша"
   }
 }

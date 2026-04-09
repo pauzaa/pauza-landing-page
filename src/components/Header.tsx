@@ -9,13 +9,14 @@ import logo from "@/assets/logo.svg";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const NAV_LINKS = [
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Screenshots", href: "#screenshots" },
+  { key: "features", href: "#features" },
+  { key: "howItWorks", href: "#how-it-works" },
+  { key: "screenshots", href: "#screenshots" },
 ] as const;
 
 export function Header() {
   const t = useTranslations("Header");
+  const tLang = useTranslations("LanguageSwitcher");
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -44,11 +45,11 @@ export function Header() {
           <a
             href="#hero"
             className="relative flex shrink-0 items-center transition-opacity hover:opacity-80"
-            aria-label="Pauza — back to top"
+            aria-label={t("aria.backToTop")}
           >
             <Image
               src={logo}
-              alt="Pauza logo"
+              alt={t("logoAlt")}
               height={30}
               className="h-[30px] w-auto"
               priority
@@ -63,7 +64,7 @@ export function Header() {
                 href={link.href}
                 className="text-sm font-medium text-on-surface-variant transition-colors hover:text-on-surface"
               >
-                {link.label}
+                {t(`nav.${link.key}`)}
               </a>
             ))}
 
@@ -86,7 +87,7 @@ export function Header() {
             type="button"
             className="flex size-10 items-center justify-center rounded-lg text-on-surface transition-colors hover:bg-surface-container-low md:hidden"
             onClick={() => setMenuOpen((prev) => !prev)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? t("aria.closeMenu") : t("aria.openMenu")}
             aria-expanded={menuOpen}
           >
             {menuOpen ? (
@@ -119,7 +120,7 @@ export function Header() {
                   transition={{ delay: i * 0.05, duration: 0.2 }}
                   className="rounded-lg px-3 py-3 text-lg font-medium text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface"
                 >
-                  {link.label}
+                  {t(`nav.${link.key}`)}
                 </motion.a>
               ))}
 
@@ -128,7 +129,7 @@ export function Header() {
               {/* Language switcher in mobile menu */}
               <div className="px-3">
                 <p className="mb-2 text-xs font-medium tracking-wide text-on-surface-variant/60 uppercase">
-                  Language
+                  {tLang("label")}
                 </p>
                 <div className="w-fit rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-sm text-on-surface-variant [&_select]:cursor-pointer [&_select]:border-none [&_select]:bg-transparent [&_select]:text-sm [&_select]:text-on-surface-variant [&_select]:outline-none">
                   <LanguageSwitcher />

@@ -21,7 +21,7 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Image
               src={logo}
-              alt="Pauza"
+              alt={t("logoAlt")}
               height={36}
               className="h-9 w-auto"
             />
@@ -33,9 +33,9 @@ export function Footer() {
           {/* Link groups */}
           <div className="grid grid-cols-2 gap-8 sm:gap-12 lg:col-span-7 lg:justify-items-end">
             {/* Legal */}
-            <nav aria-label="Legal">
+            <nav aria-label={t("legal")}>
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-on-surface">
-                Legal
+                {t("legal")}
               </h3>
               <ul className="space-y-2.5">
                 <li>
@@ -62,9 +62,9 @@ export function Footer() {
             </nav>
 
             {/* Support */}
-            <nav aria-label="Support">
+            <nav aria-label={t("support")}>
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-on-surface">
-                Support
+                {t("support")}
               </h3>
               <ul className="space-y-2.5">
                 <li>

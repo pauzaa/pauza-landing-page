@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/constants";
 
 interface StoreBadgesProps {
@@ -36,14 +37,15 @@ function PlayIcon({ className }: { className?: string }) {
 }
 
 const badges = [
-  { href: APP_STORE_URL, label: "App Store", ariaLabel: "Download on the App Store", Icon: AppleIcon },
-  { href: PLAY_STORE_URL, label: "Google Play", ariaLabel: "Get it on Google Play", Icon: PlayIcon },
+  { key: "appStore", href: APP_STORE_URL, Icon: AppleIcon },
+  { key: "googlePlay", href: PLAY_STORE_URL, Icon: PlayIcon },
 ] as const;
 
 export function StoreBadges({
   className,
   variant = "default",
 }: StoreBadgesProps) {
+  const t = useTranslations("StoreBadges");
   const badgeClasses =
     variant === "inverted"
       ? "bg-surface text-on-surface"
@@ -53,17 +55,17 @@ export function StoreBadges({
     <div
       className={`flex flex-wrap items-center gap-3 ${className ?? ""}`}
     >
-      {badges.map(({ href, label, ariaLabel, Icon }) => (
+      {badges.map(({ key, href, Icon }) => (
         <a
-          key={label}
+          key={key}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={ariaLabel}
+          aria-label={t(`${key}Aria`)}
           className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium tracking-tight transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none ${badgeClasses}`}
         >
           <Icon className="shrink-0" />
-          <span>{label}</span>
+          <span>{t(key)}</span>
         </a>
       ))}
     </div>

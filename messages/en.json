@@ -3,8 +3,22 @@
     "title": "Pauza — Focus & Digital Wellbeing App",
     "description": "Block distracting apps with custom modes, NFC-powered physical unlock, smart schedules, and AI insights. Take back your time with Pauza."
   },
+  "Layout": {
+    "skipToContent": "Skip to content"
+  },
   "Header": {
-    "download": "Download"
+    "download": "Download",
+    "logoAlt": "Pauza logo",
+    "nav": {
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "screenshots": "Screenshots"
+    },
+    "aria": {
+      "backToTop": "Pauza — back to top",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
   },
   "Hero": {
     "headline": "Take Back Your Time",
@@ -53,7 +67,19 @@
     }
   },
   "Screenshots": {
-    "heading": "See Pauza in Action"
+    "heading": "See Pauza in Action",
+    "goTo": "Go to {label}",
+    "labels": {
+      "dashboard": "Dashboard",
+      "modeEditor": "Mode Editor",
+      "activeSession": "Active Session",
+      "shield": "Shield",
+      "usageStats": "Usage Stats",
+      "blockingStats": "Blocking Stats",
+      "friends": "Friends",
+      "leaderboard": "Leaderboard",
+      "nfcUnlock": "NFC Unlock"
+    }
   },
   "Testimonials": {
     "heading": "What Users Say",
@@ -77,8 +103,17 @@
     "heading": "Ready to Take Back Your Time?",
     "subtitle": "Download Pauza for free and start building healthier screen habits today."
   },
+  "StoreBadges": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "appStoreAria": "Download on the App Store",
+    "googlePlayAria": "Get it on Google Play"
+  },
   "Footer": {
     "tagline": "Focus & Wellbeing",
+    "logoAlt": "Pauza",
+    "legal": "Legal",
+    "support": "Support",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "githubIssues": "Bug Reports & Feedback",
@@ -96,6 +131,7 @@
     "en": "English",
     "ru": "Русский",
     "uz": "Oʻzbek",
-    "uz-Cyrl": "Ўзбек"
+    "uz-Cyrl": "Ўзбек",
+    "kk": "Қазақша"
   }
 }

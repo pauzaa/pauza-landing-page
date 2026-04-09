@@ -18,20 +18,20 @@ import leaderboardScreen from "@/assets/screenshots/leaderboard_screen.png";
 import nfcScanningScreen from "@/assets/screenshots/nfc_scanning_screen.png";
 
 interface ScreenItem {
-  label: string;
+  key: string;
   image: StaticImageData;
 }
 
 const screens: ScreenItem[] = [
-  { label: "Dashboard", image: homeScreen },
-  { label: "Mode Editor", image: editModeScreen },
-  { label: "Active Session", image: homeActiveSession },
-  { label: "Shield", image: shieldScreen },
-  { label: "Usage Stats", image: usageStats },
-  { label: "Blocking Stats", image: blockingStats },
-  { label: "Friends", image: friendsScreen },
-  { label: "Leaderboard", image: leaderboardScreen },
-  { label: "NFC Unlock", image: nfcScanningScreen },
+  { key: "dashboard", image: homeScreen },
+  { key: "modeEditor", image: editModeScreen },
+  { key: "activeSession", image: homeActiveSession },
+  { key: "shield", image: shieldScreen },
+  { key: "usageStats", image: usageStats },
+  { key: "blockingStats", image: blockingStats },
+  { key: "friends", image: friendsScreen },
+  { key: "leaderboard", image: leaderboardScreen },
+  { key: "nfcUnlock", image: nfcScanningScreen },
 ];
 
 const COUNT = screens.length;
@@ -173,7 +173,7 @@ export function Screenshots() {
               const slot = getSlotForIndex(i, desktopSlots);
               return (
                 <motion.div
-                  key={screen.label}
+                  key={screen.key}
                   className="absolute w-[220px] cursor-pointer"
                   animate={
                     slot
@@ -195,7 +195,7 @@ export function Screenshots() {
                   <PhoneMockup>
                     <Image
                       src={screen.image}
-                      alt={screen.label}
+                      alt={t(`labels.${screen.key}`)}
                       fill
                       sizes="220px"
                       quality={90}
@@ -213,7 +213,7 @@ export function Screenshots() {
               const slot = getSlotForIndex(i, mobileSlots);
               return (
                 <motion.div
-                  key={screen.label}
+                  key={screen.key}
                   className="absolute w-[150px]"
                   animate={
                     slot
@@ -234,7 +234,7 @@ export function Screenshots() {
                   <PhoneMockup>
                     <Image
                       src={screen.image}
-                      alt={screen.label}
+                      alt={t(`labels.${screen.key}`)}
                       fill
                       sizes="150px"
                       quality={90}
@@ -258,7 +258,7 @@ export function Screenshots() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
             >
-              {screens[activeIndex].label}
+              {t(`labels.${screens[activeIndex].key}`)}
             </motion.p>
           </AnimatePresence>
 
@@ -266,7 +266,7 @@ export function Screenshots() {
           <div className="flex gap-2">
             {screens.map((screen, i) => (
               <button
-                key={screen.label}
+                key={screen.key}
                 onClick={() => {
                   pauseAutoPlay();
                   setActiveIndex(i);
@@ -276,7 +276,7 @@ export function Screenshots() {
                     ? "w-6 bg-primary"
                     : "w-2 bg-outline-variant hover:bg-outline"
                 }`}
-                aria-label={`Go to ${screen.label}`}
+                aria-label={t("goTo", { label: t(`labels.${screen.key}`) })}
               />
             ))}
           </div>
